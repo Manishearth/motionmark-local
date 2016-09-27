@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <title>MotionMark 1.0</title>
+
+    <link rel="stylesheet" href="MotionMark%201.0_files/animometer.css">
+
+    <script src="MotionMark%201.0_files/strings.js" defer="defer"></script>
+    <script src="MotionMark%201.0_files/extensions.js" defer="defer"></script>
+    <script src="MotionMark%201.0_files/statistics.js" defer="defer"></script>
+
+    <script src="MotionMark%201.0_files/tests.js" charset="utf-8" defer="defer"></script>
+    <script src="MotionMark%201.0_files/animometer.js" defer="defer"></script>
+
+    <script src="MotionMark%201.0_files/benchmark-runner.js" defer="defer"></script>
+
+    <script>
+        window.addEventListener("load", function() {
+            // Start the fade in animation.
+            document.body.classList.add("images-loaded");
+        });
+    </script>
+</head>
+<body class="showing-intro images-loaded">
+    <main>
+        <section id="intro" class="selected">
+            <svg class="logo"><use xlink:href="resources/runner/logo.svg#root"></use></svg>
+            <div class="body">
+                <p>MotionMark is a graphics benchmark that measures a browser’s capability to animate complex scenes at a target frame rate.</p>
+
+                <p><a href="http://browserbench.org/MotionMark/about.html">More details</a> about the benchmark are available. Bigger scores are better.</p>
+                <p>For accurate results, please take your browser window full screen, or rotate your device to landscape orientation.</p>
+                <p class="portrait-orientation-check"><b>Please rotate your device.</b></p>
+                <button class="landscape-orientation-check" onclick="benchmarkController.startBenchmark()">Run Benchmark</button>
+            </div>
+        </section>
+
+        <section id="test-container" class="frame-container"></section>
+
+        <section id="results">
+            <svg class="logo"><use xlink:href="resources/runner/logo.svg#root"></use></svg>
+            <div class="body">
+                <div class="score-container">
+                    <div class="score"></div>
+                    <div class="confidence"></div>
+                    <div class="detail">
+                        <span class="small">on a small screen (phone)</span>
+                        <span class="medium">on a medium screen (laptop, tablet)</span>
+                        <span class="large">on a large screen (desktop)</span>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <div>
+                        <table id="results-score"></table>
+                        <table id="results-data"></table>
+                    </div>
+                    <table id="results-header"></table>
+                </div>
+                <button onclick="benchmarkController.startBenchmark()">Test Again</button>
+            </div>
+        </section>
+    </main>
+
+
+</body></html>
