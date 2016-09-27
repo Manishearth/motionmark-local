@@ -209,6 +209,10 @@ Controller = Utilities.createClass(
         var complexitySamples = new SampleData(controllerSamples.fieldMap);
         results[Strings.json.samples][Strings.json.complexity] = complexitySamples;
 
+        console.log(samples[0])
+        console.log(typeof samples);
+        console.log(samples[0].forEach)
+        console.log(typeof samples[0].forEach)
         samples[0].forEach(function(timestamp, i) {
             var sample = controllerSamples.createDatum();
             controllerSamples.push(sample);

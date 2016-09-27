@@ -623,6 +623,9 @@ var SampleData = Utilities.createClass(
 
     forEach: function(iterationFunction)
     {
+        console.log('foreach')
+        console.log(iterationFunction)
+        console.log(this.data)
         this.data.forEach(iterationFunction);
     },
 
