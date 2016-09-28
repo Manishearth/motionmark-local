@@ -625,7 +625,9 @@ var SampleData = Utilities.createClass(
     {
         console.log(iterationFunction)
         console.log(this.data)
-        this.data.forEach(iterationFunction);
+        for (var i = 0; i < this.data.length; i++) {
+            iterationFunction(this.data[i])
+        }
     },
 
     createDatum: function()
